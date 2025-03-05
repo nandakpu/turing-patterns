@@ -5,7 +5,7 @@ Some utility functions for blog post on Turing Patterns.
 import matplotlib.pyplot as plt
 from matplotlib import animation
 import numpy as np
-
+import os
 class BaseStateSystem:
     """
     Base object for "State System".
