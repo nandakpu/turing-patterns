@@ -53,6 +53,7 @@ class BaseStateSystem:
         for x1, x2, and x3, ensuring no negative values are displayed.
         """
         self.initialise()
+        os.makedirs(save_dir, exist_ok=True)
         
         for _ in range(n_steps):
             self.update()
@@ -73,6 +74,6 @@ class BaseStateSystem:
             ax.set_ylabel("Y-axis")
             ax.grid(False)  # Removes grid lines
             plt.colorbar(im, ax=ax)  # Add colorbar
-            
-            fig.savefig(filename)
+            filepath = os.path.join(save_dir, filename)
+            fig.savefig(filepath) 
             plt.close(fig)
