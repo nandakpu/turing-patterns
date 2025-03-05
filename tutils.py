@@ -47,7 +47,7 @@ class BaseStateSystem:
         anim.save(filename=filename, dpi=60, fps=10, writer='imagemagick')
         plt.close()
 
-    def plot_evolution_outcome(self, filename_prefix, n_steps):
+    def plot_evolution_outcome(self, filename_prefix, n_steps, save_dir):
         """
         Evolves the system for n_steps and saves three separate images
         for x1, x2, and x3, ensuring no negative values are displayed.
